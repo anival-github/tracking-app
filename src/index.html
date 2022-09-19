@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Demo page</title>
+    <script src="./tracker.js"></script>
+    <script>
+      tracker.track("pageview");
+      tracker.track("test", "one", "two", "three");
+    </script>
+  </head>
+  <body>
+    <button onclick="tracker.track('click-button')">Click me</button>
+    <ul>
+      <li>
+        <a href="/" onclick="tracker.track('click-link', 'root')">Root</a>
+      </li>
+      <li>
+        <a href="/1.html" onclick="tracker.track('click-link', '1')">1.html</a>
+      </li>
+      <li>
+        <a href="/2.html" onclick="tracker.track('click-link', '2')">2.html</a>
+      </li>
+    </ul>
+  </body>
+</html>
